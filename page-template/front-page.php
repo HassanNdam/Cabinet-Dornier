@@ -14,7 +14,7 @@ $myquery = new WP_Query($args);
 
 $wp_query = $myquery;
 
-$post_nomber = $myquery -> found_posts;
+$post_number = $myquery -> found_posts;
 
 
 ?>
@@ -78,7 +78,7 @@ $post_nomber = $myquery -> found_posts;
                                                     <hr class="featurette-divider mb-4">         
                                                     <div class="col-12 text-center">
                                                         <a href="<?php the_permalink();?>" class="" title="Visiter l'offre d'emploi <?php echo the_title_attribute();?>">
-                                                            <button type="submit"  class="btn btn-primary see-post">Détails de l'offre <i class="fa fa-info-circle" aria-hidden="true"></i></button>
+                                                            <button type="submit"  class="btn btn-primary see-post">Détails de l'offre </button>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -122,7 +122,7 @@ $post_nomber = $myquery -> found_posts;
 
 //Ne pas afficher ce bloc si Post == 0
 
-if ($post_nomber  > 0) :
+if ($post_number  > 0) :
 
 ?>
 
