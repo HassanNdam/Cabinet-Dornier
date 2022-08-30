@@ -135,6 +135,20 @@ if (! function_exists('pagination_post')) {
     }
 }
 
+// Fonction remplacement du texte dans l'offre
+
+
+function replace_text_wps($text){
+    $replace = array(
+        // 'MOT A REMPLACER' => 'REMPLACER AVEC CECI'
+        '<h3>Poste</h3>' => '<h3>Vos missions</h3>'
+    );
+    $text = str_replace(array_keys($replace), $replace, $text);
+    return $text;
+}
+
+add_filter('the_content', 'replace_text_wps');
+
 
 //Fonction affichage et/ou masque localisation
 

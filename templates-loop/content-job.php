@@ -60,7 +60,12 @@ $postlink = get_post_custom_values('job_link')[0];
     <div class="container mt-5 mb-5">
         <div class="row justify-content-center">
                 <div class="col-lg-12 p-5 border shadow-sm rounded-3">
-                    <?php the_content();?>
+                    <?php 
+                    
+                    the_content();
+                    
+                    // echo str_replace('<h3>Profil</h3>', '<h3>Vos missions</h3>', ); 
+                    ?>
                 </div>
         </div>
     </div>
