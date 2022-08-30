@@ -239,6 +239,14 @@ select:focus>option:checked {
     padding: 0.12rem;
     margin: auto;
     max-width: 200px;
+    bottom: 0;
+}
+
+@media screen and (max-width:1024px) {
+    .block-offre .featurette-divider{
+        display: none;
+    }
+    
 }
 
 .featurette-divider-offre {
@@ -276,19 +284,17 @@ p.intuitionapply {
 }
 
 .see-post {
-    position: absolute;
-    right: 5rem;
-     /*bottom: -1.2em;
-     letter-spacing: 2px;
-    opacity: 0.9; */ 
     background-color: #F3BE52;
     font-weight: 600;
     font-size: 1.2em;
-    z-index: 9999;
     color: #373030;
     transition: 0.2s all;
     border-radius: 50rem;
   }
+
+.bloc-absolute{
+    margin-top: -4em;
+}
 
 .see-post:hover {
     background-color: transparent;
@@ -299,17 +305,10 @@ p.intuitionapply {
 
 .block-offre {
     padding: 0.5em;
-    /* border-top: 3px #8F83BD solid;
-    border-right: 3px #F3BE52 solid;
-    border-bottom: 3px #8F83BD solid;
-    border-left: 3px #F3BE52 solid;   */
     border: 0.16em #8F83BD solid;
     height: 21em;
     width: 21em;
     width: auto;
-    position: relative;
-    display: flex;
-    flex-direction: column;
     border-radius: 2px;
     transition: 0.2s all;
 }
@@ -396,6 +395,7 @@ p.intuitionapply {
     width: 792px;
     height: 580px;
     opacity: 0.1;
+    margin-top: -10em;
 }
 
 

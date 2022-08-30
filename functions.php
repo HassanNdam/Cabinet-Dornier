@@ -31,7 +31,7 @@ function complement_support()
 
 add_action('after_setup_theme', 'complement_support');
 
-function complement_style()
+function dornier_style()
 {
     wp_enqueue_style('my-custom-style', get_template_directory_uri() . '/style.css', array('ms-bootstrap'), time());
     wp_enqueue_style(
@@ -49,7 +49,7 @@ function complement_style()
         'All'
     );
 }
-add_action('wp_enqueue_scripts', 'complement_style');
+add_action('wp_enqueue_scripts', 'dornier_style');
 
 
 function reinitialiser()
@@ -145,6 +145,7 @@ function replace_text_wps($text)
         '<h3>Poste</h3>' => '<h3>Vos missions</h3>'
     );
     $text = str_replace(array_keys($replace), $replace, $text);
+
     return $text;
 }
 
@@ -155,17 +156,20 @@ add_filter('the_content', 'replace_text_wps');
 
 function affichage_localisation_accueil(string $post_location)
 {
-    if ($post_location == "") {
+    if (!$post_location ) {
     } else {
         echo '<h4 class="local-offre mt-3"><i class="fa fa-map-marker" aria-hidden="true"></i>' .' '. $post_location . '</h4>';
     }
+    return $post_location;
 }
 
 
 function affichage_localisation_pagepost(string $post_location)
 {
-    if ($post_location == "") {
+    if (!$post_location) {
+
     } else {
-        echo '<h4 class="local-offre text-white mt-3"><i class="fa fa-map-marker" aria-hidden="true"></i>' .' '. $post_location . '</h4>';
+        echo '<h4 class="local-offre text-white"><i class="fa fa-map-marker" aria-hidden="true"></i>' .' '. $post_location . '</h4>';
     }
+    return $post_location;
 }

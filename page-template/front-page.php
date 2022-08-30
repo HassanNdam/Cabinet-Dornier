@@ -57,9 +57,9 @@ $post_number = $myquery -> found_posts;
 
 						 <!-- Affichage des posts -->
 						
-        				<div class="col-md-12 col-lg-6 col-xxl-4 mb-5">
-                                        <div class="block-offre mb-4 position-relative">
-                                            <div class="row align-items-center">
+        				<div class="col-md-12 col-lg-6 col-xxl-4 mb-5 ">
+                                        <div class="block-offre mb-4 position-relative ">
+                                            <div class="row align-items-center ">
                                                 <div class="col-1">
                                                             
                                                 </div>
@@ -77,12 +77,14 @@ $post_number = $myquery -> found_posts;
                                                             <h4 class="type-offre mt-3 mb-4"><i class="fa fa-briefcase" aria-hidden="true"></i>  <?php echo $postcontract?></h4>
                                                         </div>
                                                     </div>    
-                                                    <hr class="featurette-divider mb-4">         
-                                                    <div class="col-12 text-center">
-                                                        <a href="<?php the_permalink();?>" class="" title="Visiter l'offre d'emploi <?php echo the_title_attribute();?>">
-                                                            <button type="submit"  class="btn btn-primary see-post">Détails de l'offre </button>
-                                                        </a>
-                                                    </div>
+                                                       
+                                                     <div class="col-12 text-center position-absolute top-100 start-50 translate-middle bloc-absolute">
+                                                        <hr class="featurette-divider mb-4">   
+                                                            <a href="<?php the_permalink();?>" class="" title="Visiter l'offre d'emploi <?php echo the_title_attribute();?>">
+                                                                <button type="submit"  class="btn btn-primary see-post ">Détails de l'offre </button>
+                                                            </a>
+                                                     </div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -119,26 +121,3 @@ $post_number = $myquery -> found_posts;
 <div class="container d-flex align-items-center justify-content-center mt-5">
          <?php pagination_post();?> 
 </div>
-
-<?php 
-
-//Ne pas afficher ce bloc si Post == 0
-
-if ($post_number  > 0) :
-
-?>
-
-<div class="container post-non-trouve shadow-sm bg-light rounded-3 mt-5 mb-5 ">
-    <div class="row justify-content-center mt-4">  
-        <div class="col-lg-4 mt-5 text-center">
-            <i class="fa fa-search" aria-hidden="true"></i>
-        </div>
-        <div class="col-lg-4 text-center">
-        <h3 class="aucun-poste mt-3 mb-5">Aucune offre ne correspond à votre recherche ?</h3>
-            <a  class="mt-5" href="https://jobaffinity.fr/apply/h7qk6u22iy2o1e1wsb" target="_blank" title="Soumettre une candidature spontanée">
-                <button type="button" class="btn btn-primary btn-candidate-down" onclick="this.blur();">Candidature spontanée  <i class="fa fa-user-o" aria-hidden="true"></i></button>
-            </a>
-        </div>
-      </div>
-</div>
-<?php endif; ?>
