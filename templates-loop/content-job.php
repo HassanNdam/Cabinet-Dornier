@@ -19,7 +19,7 @@ $postlink = get_post_custom_values('job_link')[0];
                 <h4 class="type-offre text-white"><i class="fa fa-briefcase" aria-hidden="true"></i> <?php echo $postcontract; ?></h4>
             </div>
             <div class="col-lg-4 mb-5">
-                <h4 class="local-offre text-white"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo $postlocation; ?></h4>
+                <h4 class="local-offre text-white"><i class="fa fa-map-marker" aria-hidden="true"></i> <?= $postlocation == "" ?  "<span class=\"text-white fst-italic\">Anonyme</span>" : $postlocation; ?></h4>
             </div> 
         </div>          
    </div>
