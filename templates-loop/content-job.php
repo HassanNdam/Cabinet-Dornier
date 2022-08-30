@@ -73,7 +73,7 @@ $postlink = get_post_custom_values('job_link')[0];
     </div>
 </div>
 
- <div class="container col-lg-12 text-center bg-light p-5 bottom-postule rounded-3">
+ <div class="container col-lg-12 text-center bg-light p-5 rounded-3">
             <a href="<?php echo $postlink ;?>" target="_blank" title="Postuler à l'offre <?php echo the_title_attribute();?>">
                 <button type="button" class="btn btn-primary" onclick="this.blur();">Je postule maintenant</button>
             </a>
