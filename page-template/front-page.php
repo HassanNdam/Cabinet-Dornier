@@ -66,7 +66,7 @@ $post_number = $myquery -> found_posts;
                                                 <div class="col-11"><div>		
                                                     <div class="row mt-2">
                                                             <h4 class="mt-3"> 
-                                                                <?php echo the_title_attribute();?>
+                                                                <?= the_title_attribute(); ?>
                                                             </h4>	               
                                                     </div>
                                                         <div class="row">
@@ -78,7 +78,7 @@ $post_number = $myquery -> found_posts;
                                                     <hr class="featurette-divider mb-4">         
                                                     <div class="col-12 text-center">
                                                         <a href="<?php the_permalink();?>" class="" title="Visiter l'offre d'emploi <?php echo the_title_attribute();?>">
-                                                            <button type="submit"  class="btn btn-primary see-post">Détails de l'offre </button>
+                                                            <button type="submit"  class="btn btn-primary see-post absolute">Détails de l'offre </button>
                                                         </a>
                                                     </div>
                                                 </div>
