@@ -17,7 +17,7 @@
 			</div>
 			<div class="col-lg-3 footer-links">
 				<h5><a href="https://www.linkedin.com/company/dornier-consulting-rh/" target="_blank">
-				  <i class="fa fa-linkedin" aria-hidden="true"></i> 
+				<i class="fa fa-linkedin-square" aria-hidden="true"></i>
 					</a>
 				</h5>
 			</div>
