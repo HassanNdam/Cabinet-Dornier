@@ -71,14 +71,16 @@ $post_number = $myquery -> found_posts;
                                                     </div>
                                                         <div class="row">
                                                             <h4 class="date-offre mt-3"><i class="fa fa-calendar" aria-hidden="true"></i> <span class="text-muted font-italic">Publiée le <?php echo get_the_date();?></span></h4>
-                                                            <h4 class="local-offre mt-3"><i class="fa fa-map-marker" aria-hidden="true"></i> <?= $postlocation == "" ?  "<span class=\"text-danger fst-italic\">Anonyme</span>" : $postlocation; ?></h4>
+
+                                                            <?php affichage_localisation($postlocation); ?>
+
                                                             <h4 class="type-offre mt-3 mb-4"><i class="fa fa-briefcase" aria-hidden="true"></i>  <?php echo $postcontract?></h4>
                                                         </div>
                                                     </div>    
                                                     <hr class="featurette-divider mb-4">         
                                                     <div class="col-12 text-center">
                                                         <a href="<?php the_permalink();?>" class="" title="Visiter l'offre d'emploi <?php echo the_title_attribute();?>">
-                                                            <button type="submit"  class="btn btn-primary see-post absolute">Détails de l'offre </button>
+                                                            <button type="submit"  class="btn btn-primary see-post">Détails de l'offre </button>
                                                         </a>
                                                     </div>
                                                 </div>

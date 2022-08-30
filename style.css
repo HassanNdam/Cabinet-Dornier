@@ -276,6 +276,11 @@ p.intuitionapply {
 }
 
 .see-post {
+    position: absolute;
+    right: 5rem;
+     /*bottom: -1.2em;
+     letter-spacing: 2px;
+    opacity: 0.9; */ 
     background-color: #F3BE52;
     font-weight: 600;
     font-size: 1.2em;
@@ -283,7 +288,7 @@ p.intuitionapply {
     color: #373030;
     transition: 0.2s all;
     border-radius: 50rem;
-}
+  }
 
 .see-post:hover {
     background-color: transparent;
