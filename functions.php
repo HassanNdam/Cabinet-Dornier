@@ -138,11 +138,21 @@ if (! function_exists('pagination_post')) {
 
 //Fonction affichage et/ou masque localisation
 
-function affichage_localisation(string $post_location)
+function affichage_localisation_accueil(string $post_location)
 {
     if ($post_location == "") {
         
     } else {
         echo '<h4 class="local-offre mt-3"><i class="fa fa-map-marker" aria-hidden="true"></i>' .' '. $post_location . '</h4>'; 
+}
+}
+
+
+function affichage_localisation_pagepost(string $post_location)
+{
+    if ($post_location == "") {
+        
+    } else {
+        echo '<h4 class="local-offre text-white mt-3"><i class="fa fa-map-marker" aria-hidden="true"></i>' .' '. $post_location . '</h4>'; 
 }
 }
