@@ -22,14 +22,14 @@ add_filter('excerpt_more', 'wpdocs_excerpt_more');
 
 
 
-function complement_support()
+function dornier_support()
 {
     add_theme_support('title-tag');
     add_theme_support('custom-logo');
     add_theme_support("post-thumbnails");
 }
 
-add_action('after_setup_theme', 'complement_support');
+add_action('after_setup_theme', 'dornier_support');
 
 function dornier_style()
 {
@@ -178,7 +178,7 @@ function center_bloc_content_page(string $post_location, string $contract_type)
         </div>
 
         <?php
-    }else{
+    } else {
         ?>
         <div class="row">
             <div class="col-lg-4">
