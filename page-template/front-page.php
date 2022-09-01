@@ -57,7 +57,7 @@ $post_number = $myquery -> found_posts;
 
 						 <!-- Affichage des posts -->
 						
-        				<div class="col-md-12 col-lg-6 col-xxl-4 mb-5 ">
+        				<div class="col-md-12 col-lg-6 col-xxl-4 mb-5">
                                         <div class="block-offre mb-4 position-relative ">
                                             <div class="row align-items-center ">
                                                 <div class="col-1">

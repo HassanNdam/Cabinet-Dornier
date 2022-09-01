@@ -156,7 +156,7 @@ add_filter('the_content', 'replace_text_wps');
 
 function affichage_localisation_accueil(string $post_location)
 {
-    if (!$post_location ) {
+    if (!$post_location) {
     } else {
         echo '<h4 class="local-offre mt-3"><i class="fa fa-map-marker" aria-hidden="true"></i>' .' '. $post_location . '</h4>';
     }
@@ -164,12 +164,33 @@ function affichage_localisation_accueil(string $post_location)
 }
 
 
-function affichage_localisation_pagepost(string $post_location)
+function center_bloc_content_page(string $post_location, string $contract_type)
 {
     if (!$post_location) {
+        ?>
+        <div class="row justify-content-center">
+            <div class="col-lg-4">
+                <h4 class="date-offre text-white"><i class="fa fa-calendar" aria-hidden="true"></i><?php echo " Publiée le " . get_the_date(); ?></h4>
+            </div>
+            <div class="col-lg-4">
+                <h4 class="type-offre text-white"><i class="fa fa-briefcase" aria-hidden="true"></i> <?php echo $contract_type; ?></h4>
+            </div>
+        </div>
 
-    } else {
-        echo '<h4 class="local-offre text-white"><i class="fa fa-map-marker" aria-hidden="true"></i>' .' '. $post_location . '</h4>';
+        <?php
+    }else{
+        ?>
+        <div class="row">
+            <div class="col-lg-4">
+                <h4 class="date-offre text-white"><i class="fa fa-calendar" aria-hidden="true"></i><?php echo " Publiée le " . get_the_date(); ?></h4>
+            </div>
+            <div class="col-lg-4">
+                <h4 class="type-offre text-white"><i class="fa fa-briefcase" aria-hidden="true"></i> <?php echo $contract_type; ?></h4>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <h4 class="local-offre text-white"><i class="fa fa-map-marker" aria-hidden="true"></i><?php echo  " " . $post_location; ?> </h4>
+            </div> 
+        </div>
+        <?php
     }
-    return $post_location;
 }

@@ -332,6 +332,7 @@ p.intuitionapply {
     font-weight: 530;
 }
 
+
 .font-italic {
     font-style: italic;
     font-size: 12px;
@@ -567,46 +568,4 @@ img {
 .text-paradisiak:hover {
     color: white;
     text-decoration: underline;
-}
-
-/* Cookie  */
-
-a#cookie-bar-prompt-logo {
-    display: none;
-}
-
-#cookie-bar{
-    padding: 30px;
-}
-
-#cookie-bar p a{
-    color: white;
-    text-decoration: underline;
-}
-
-#cookie-bar p a:hover{
-    color: white;
-    text-decoration: none;
-}
-
-#cookie-bar #cookie-bar-button{
-    background-color: #F3BE52;
-    border-bottom: 1px solid #222;
-    border-radius: 5px;
-    color: #fff!important;
-    /* cursor: pointer;
-    display: inline-block;
-    float: right; */
-    font-weight: 700;
-    line-height: 1;
-    margin-right: 20px;
-    margin-top: 2px;
-    padding: 12px;
-    position: relative;
-    text-decoration: none;
-    margin: 10px 0;
-}
-
-#cookie-bar #cookie-bar-button:hover{
-    background-color: #312C62;
 }
