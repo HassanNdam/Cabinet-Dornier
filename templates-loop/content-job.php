@@ -10,8 +10,39 @@ $postlink = get_post_custom_values('job_link')[0];
 <div class="position-relative p-3 p-md-5 text-center single-image">
     <div class="show-poste text-white">
       <h4 class="titre-single mb-5"></i><?php echo  the_title_attribute()?></h4>
+          
+       <?php
 
-        <?php center_bloc_content_page($postlocation, $postcontract) ?>          
+            if (is_null($postlocation)) {
+                ?>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4">
+                            <h4 class="date-offre text-white"><i class="fa fa-calendar" aria-hidden="true"></i><?php echo " Publiée le " . get_the_date(); ?></h4>
+                        </div>
+                        <div class="col-lg-4">
+                            <h4 class="type-offre text-white"><i class="fa fa-briefcase" aria-hidden="true"></i> <?php echo $postcontract; ?></h4>
+                        </div>
+                    </div>
+
+                <?php
+            } else {
+                ?>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h4 class="date-offre text-white"><i class="fa fa-calendar" aria-hidden="true"></i><?php echo " Publiée le " . get_the_date(); ?></h4>
+                    </div>
+                    <div class="col-lg-4">
+                        <h4 class="type-offre text-white"><i class="fa fa-briefcase" aria-hidden="true"></i> <?php echo $postcontract; ?></h4>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <h4 class="local-offre text-white"><i class="fa fa-map-marker" aria-hidden="true"></i><?php echo  " " . $postlocation; ?> </h4>
+                    </div> 
+                </div>
+                <?php
+            }
+
+
+?>          
 
    </div>
    <div class="je-postule">
@@ -51,8 +82,8 @@ $postlink = get_post_custom_values('job_link')[0];
         <div class="row justify-content-center">
                 <div class="col-lg-12 p-5 border shadow-sm rounded-3">
                     <?php
-                    the_content();
-                    ?>
+           the_content();
+?>
                 </div>
         </div>
     </div>

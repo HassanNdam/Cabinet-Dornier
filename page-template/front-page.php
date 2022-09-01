@@ -2,10 +2,10 @@
 // Déclaration des variables
 
 global $wp_query;
-$args = $wp_query -> query_vars; 
+$args = $wp_query -> query_vars;
 $args ['post_type'] = 'post';
 
-$metaquery = array(); 
+$metaquery = array();
 
 
 $args['meta_query'] = $metaquery;
@@ -42,18 +42,17 @@ $post_number = $myquery -> found_posts;
 <!-- Affichage poste -->
 
 <div class="container">
-				<?php if ( $myquery->have_posts() ) : ?>
+				<?php if ($myquery->have_posts()) : ?>
 					<div class="row mb-3">
-					<?php  
-					while ( $myquery->have_posts() ) : $myquery->the_post(); 
-                    
-                    $postid = get_post_custom_values('job_id')[0];
-                    $postcontract = get_post_custom_values('job_contract_type')[0];
-                    $postlocation = get_post_custom_values('job_location')[0];
-                    $postactivite = get_post_custom_values('custom_secteur_d\'activite')[0];
-                    $postlink = get_post_custom_values('job_link')[0];
-                    
-                    ?>
+					<?php
+                    while ($myquery->have_posts()) : $myquery->the_post();
+
+                        $postid = get_post_custom_values('job_id')[0];
+                        $postcontract = get_post_custom_values('job_contract_type')[0];
+                        $postlocation = get_post_custom_values('job_location')[0];
+                        $postlink = get_post_custom_values('job_link')[0];
+
+                        ?>
 
 						 <!-- Affichage des posts -->
 						
@@ -72,7 +71,13 @@ $post_number = $myquery -> found_posts;
                                                         <div class="row">
                                                             <h4 class="date-offre mt-3"><i class="fa fa-calendar" aria-hidden="true"></i> <span class="text-muted font-italic">Publiée le <?php echo get_the_date();?></span></h4>
 
-                                                            <?php affichage_localisation_accueil($postlocation); ?>
+                                                            <?php
+
+                                                           if($postlocation == null) {
+                                                            } else {
+                                                                affichage_localisation_accueil($postlocation);
+                                                            }
+                                                             ?>
 
                                                             <h4 class="type-offre mt-3 mb-4"><i class="fa fa-briefcase" aria-hidden="true"></i>  <?php echo $postcontract?></h4>
                                                         </div>
