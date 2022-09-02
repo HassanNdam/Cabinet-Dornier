@@ -73,10 +73,8 @@ $post_number = $myquery -> found_posts;
 
                                                             <?php
 
-                                                           if($postlocation == null) {
-                                                            } else {
-                                                                affichage_localisation_accueil($postlocation);
-                                                            }
+                                                            $postlocation == null ? '': affichage_localisation_accueil($postlocation);
+
                                                              ?>
 
                                                             <h4 class="type-offre mt-3 mb-4"><i class="fa fa-briefcase" aria-hidden="true"></i>  <?php echo $postcontract?></h4>

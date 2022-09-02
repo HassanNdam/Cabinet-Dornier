@@ -13,7 +13,7 @@ $postlink = get_post_custom_values('job_link')[0];
           
        <?php
 
-            if (is_null($postlocation)) {
+            if (is_null($postlocation)) {  
                 ?>
                     <div class="row justify-content-center">
                         <div class="col-lg-4">

@@ -23,7 +23,7 @@ wp_head();
         </a>
     <div class="d-flex">
         <a href="https://jobaffinity.fr/apply/h7qk6u22iy2o1e1wsb" target="_blank">
-            <button type="button" class="btn btn-primary" onclick="this.blur();">Candidature spontanée <i class="fa fa-user-o" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-primary" onclick="this.blur();">Candidature spontanée <i class="fa fa-user" aria-hidden="true"></i></button>
         </a>
     </div>
     </nav>

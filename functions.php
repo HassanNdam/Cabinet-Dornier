@@ -52,20 +52,6 @@ function dornier_style()
 add_action('wp_enqueue_scripts', 'dornier_style');
 
 
-function reinitialiser()
-{
-    if ($_GET) {
-        if ((isset($_GET['s'])) or isset($_GET['location']) or isset(($_GET['activite']))) {
-            ?>
-            <a href="<?php echo get_site_url(); ?>" class="mt-5">
-                Actualiser <i class="fas fa-sync fa-sync"></i>
-            </a>
-            <?php
-        }
-    }
-}
-
-
 if (! function_exists('pagination_post_nav')) {
     function pagination_post_nav()
     {
@@ -156,9 +142,7 @@ add_filter('the_content', 'replace_text_wps');
 
 function affichage_localisation_accueil(string $post_location)
 {
-
-
-    if (!$post_location ){
+    if (!$post_location) {
     } else {
         echo '<h4 class="local-offre mt-3"><i class="fa fa-map-marker" aria-hidden="true"></i>' .' '. $post_location . '</h4>';
     }
